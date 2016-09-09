@@ -17,7 +17,7 @@
 @property (strong, nonatomic) DeliveryCar *car;
 
 -(void) deliverPizza:(Pizza *)pizza;
-
+-(NSMutableArray *) pizzaList;
 
 
 @end

@@ -21,9 +21,17 @@
     return self;
 }
 
+-(NSMutableArray *) pizzaList{
+    
+    NSLog(@"We have delivered %lu pizzas", (unsigned long)self.deliveredPizza.count);
+    return self.deliveredPizza;
+    
+}
+
 -(void) deliverPizza:(Pizza *)pizza{
     
     [self.deliveredPizza addObject:pizza];
+    
     [self.car deliverPizza:pizza];
     
 }

@@ -12,19 +12,27 @@
 #import "Pizza.h"
 #import "BadManager.h"
 #import "HappyManager.h"
+#import "DeliveryService.h"
+#import "DeliveryCar.h"
 
 int main(int argc, const char * argv[])
 {
     
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
+        NSLog(@"Please pick your pizza size and toppings!");
         
         Kitchen *restaurantKitchen = [[Kitchen alloc] init];
         
-        BadManager *badManager = [[BadManager alloc] init];
+        //BadManager *badManager = [[BadManager alloc] init];
         
         HappyManager *happyManager = [[HappyManager alloc] init];
+        
+        DeliveryService *deliveryMan = [[DeliveryService alloc] init];
+        
+        happyManager.delivery = deliveryMan;
+        
+        happyManager.delivery.car = [[DeliveryCar alloc] init];
         
         
         
@@ -54,19 +62,28 @@ int main(int argc, const char * argv[])
             
             // And then send some message to the kitchen...
             
+            
+            
+            
+            
+            
+            
+            
             NSMutableArray *toppings = [[NSMutableArray alloc] initWithArray:commandWords];
             
-            NSString *managerType = [toppings objectAtIndex:0];
+//            NSString *managerType = [toppings objectAtIndex:0];
+//            
+//            
+//            [toppings removeObjectAtIndex:0];
             
-            [toppings removeObjectAtIndex:0];
             
-            if ([managerType isEqualToString:@"bad"]) {
-                restaurantKitchen.delegate = badManager;
-            }
-            
-            else if ([managerType isEqualToString:@"happy"]) {
-                restaurantKitchen.delegate = happyManager;
-            }
+//            if ([managerType isEqualToString:@"bad"]) {
+//                restaurantKitchen.delegate = badManager;
+//            }
+//            
+//            else if ([managerType isEqualToString:@"happy"]) {
+//                restaurantKitchen.delegate = happyManager;
+//            }
             
             NSString *sizeString = [toppings firstObject];
             
@@ -84,9 +101,14 @@ int main(int argc, const char * argv[])
             
             Pizza *newPizza = [restaurantKitchen makePizzaWithSize:pizzasize toppings:toppings];
             
-            NSLog(@"your pizza %@", newPizza);
+            [happyManager.delivery deliverPizza:newPizza];
+//                [happyManager.delivery deliverPizza:newPizza];
+//                [happyManager.delivery deliverPizza:newPizza];
+//                [happyManager.delivery deliverPizza:newPizza];
+            
+            NSLog(@"%@", [happyManager.delivery pizzaList]);
     
-        
+            
         }
     
     }
