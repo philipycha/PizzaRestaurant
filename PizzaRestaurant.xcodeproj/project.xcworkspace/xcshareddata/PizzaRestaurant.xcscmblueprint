@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "879A3F58CDDF755B4FD8F4D19587745211AB540F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5C0877050C14B380B2F97B4469692D0FA19B9827" : 0,
+    "879A3F58CDDF755B4FD8F4D19587745211AB540F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BEAC8936-A94D-4218-BB7E-5DAFC3974141",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5C0877050C14B380B2F97B4469692D0FA19B9827" : "iOS-Student-PizzaRestaurant",
+    "879A3F58CDDF755B4FD8F4D19587745211AB540F" : "PizzaRestaurant\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PizzaRestaurant",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PizzaRestaurant.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lighthouse-labs\/iOS-Student-PizzaRestaurant.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5C0877050C14B380B2F97B4469692D0FA19B9827"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/philipycha\/PizzaRestaurant.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "879A3F58CDDF755B4FD8F4D19587745211AB540F"
+    }
+  ]
+}

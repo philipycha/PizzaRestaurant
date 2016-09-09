@@ -10,6 +10,8 @@
 
 #import "Kitchen.h"
 #import "Pizza.h"
+#import "BadManager.h"
+#import "HappyManager.h"
 
 int main(int argc, const char * argv[])
 {
@@ -18,7 +20,12 @@ int main(int argc, const char * argv[])
         
         NSLog(@"Please pick your pizza size and toppings:");
         
-        Kitchen *restaurantKitchen = [Kitchen new];
+        Kitchen *restaurantKitchen = [[Kitchen alloc] init];
+        
+        BadManager *badManager = [[BadManager alloc] init];
+        
+        HappyManager *happyManager = [[HappyManager alloc] init];
+        
         
         
         while (TRUE) {
@@ -36,13 +43,35 @@ int main(int argc, const char * argv[])
             // Take the first word of the command as the size, and the rest as the toppings
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
+            
+            if ([commandWords count] < 2) {
+                NSLog(@"invalid command");
+                continue;
+            } else if ([commandWords count] == 2) {
+                NSLog(@"not enough toppings! specify at least one");
+                continue;
+            }
+            
             // And then send some message to the kitchen...
             
-            NSMutableArray *toppings = [[NSMutableArray alloc] init];
-            [toppings addObjectsFromArray:commandWords];
+            NSMutableArray *toppings = [[NSMutableArray alloc] initWithArray:commandWords];
+            
+            NSString *managerType = [toppings objectAtIndex:0];
+            
             [toppings removeObjectAtIndex:0];
             
-            NSString *sizeString = [commandWords firstObject];
+            if ([managerType isEqualToString:@"bad"]) {
+                restaurantKitchen.delegate = badManager;
+            }
+            
+            else if ([managerType isEqualToString:@"happy"]) {
+                restaurantKitchen.delegate = happyManager;
+            }
+            
+            NSString *sizeString = [toppings firstObject];
+            
+            [toppings removeObjectAtIndex:0];
+            
             PizzaSize pizzasize;
             
             if ([sizeString isEqualToString:@"small"]) {
