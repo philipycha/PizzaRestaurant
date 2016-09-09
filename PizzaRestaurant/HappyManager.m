@@ -25,6 +25,8 @@
     
     NSLog(@"Hope you enjoy the Pizza!");
     
+    [self.delivery deliverPizza:pizza];
+    
 }
 
 @end

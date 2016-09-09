@@ -10,6 +10,8 @@
 		15D848161D821B0400D6BE22 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D848151D821B0400D6BE22 /* Pizza.m */; };
 		15D848251D8341BF00D6BE22 /* BadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D848241D8341BF00D6BE22 /* BadManager.m */; };
 		15D848281D83458600D6BE22 /* HappyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D848271D83458600D6BE22 /* HappyManager.m */; };
+		15D848441D836DFD00D6BE22 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D848431D836DFD00D6BE22 /* DeliveryService.m */; };
+		15D848471D836E0700D6BE22 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D848461D836E0700D6BE22 /* DeliveryCar.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
@@ -34,6 +36,10 @@
 		15D848241D8341BF00D6BE22 /* BadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadManager.m; sourceTree = "<group>"; };
 		15D848261D83458600D6BE22 /* HappyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyManager.h; sourceTree = "<group>"; };
 		15D848271D83458600D6BE22 /* HappyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappyManager.m; sourceTree = "<group>"; };
+		15D848421D836DFD00D6BE22 /* DeliveryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		15D848431D836DFD00D6BE22 /* DeliveryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
+		15D848451D836E0700D6BE22 /* DeliveryCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		15D848461D836E0700D6BE22 /* DeliveryCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6001EC83197B4EC300F97011 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				6001EC83197B4EC300F97011 /* main.m */,
+				15D848421D836DFD00D6BE22 /* DeliveryService.h */,
+				15D848431D836DFD00D6BE22 /* DeliveryService.m */,
+				15D848451D836E0700D6BE22 /* DeliveryCar.h */,
+				15D848461D836E0700D6BE22 /* DeliveryCar.m */,
 				15D848261D83458600D6BE22 /* HappyManager.h */,
 				15D848271D83458600D6BE22 /* HappyManager.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
@@ -155,11 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D848471D836E0700D6BE22 /* DeliveryCar.m in Sources */,
 				15D848161D821B0400D6BE22 /* Pizza.m in Sources */,
 				15D848281D83458600D6BE22 /* HappyManager.m in Sources */,
 				15D848251D8341BF00D6BE22 /* BadManager.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
+				15D848441D836DFD00D6BE22 /* DeliveryService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
